@@ -27,8 +27,14 @@ SECRET_KEY =\
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-All_host = "https://yerunkar99sy-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai";
-CSRF_TO = "https://yerunkar99sy-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai";
+All_host = (
+    "https://yerunkar99sy-8000.theiadockernext-0-labs-prod-"
+    "theiak8s-4-tor01.proxy.cognitiveclass.ai"
+)
+CSRF_TO = (
+    "https://yerunkar99sy-8000.theiadockernext-0-labs-prod-"
+    "theiak8s-4-tor01.proxy.cognitiveclass.ai"
+)
 ALLOWED_HOSTS = ['localhost', 'All_host']
 CSRF_TRUSTED_ORIGINS = ['CSRF_TO']
 
@@ -95,7 +101,7 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', # type: ignore
     },
     {
         'NAME':
