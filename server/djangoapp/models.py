@@ -1,7 +1,10 @@
 # Uncomment the following imports before adding the Model code
 
 from django.db import models  # type: ignore
-from django.core.validators import MaxValueValidator, MinValueValidator  # type: ignore
+from django.core.validators import ( # type: ignore
+    MaxValueValidator,
+    MinValueValidator,
+)
 
 
 # Create your models here.
