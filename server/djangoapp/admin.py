@@ -1,4 +1,4 @@
-from django.contrib import admin # type: ignore
+from django.contrib import admin  # type: ignore
 from .models import CarMake, CarModel  # Correct import statement
 
 
@@ -10,19 +10,21 @@ class CarModelInline(admin.TabularInline):
 
 # Class to customize CarModel in the admin interface
 class CarModelAdmin(admin.ModelAdmin):
-    list_display = ('name', 'car_make', 
+    list_display = ('name', 'car_make',
                     'type', 'year')  # Fields to display in the list view
-    search_fields = ('name', 
+    search_fields = ('name',
                      'car_make__name')  # Fields to be searchable
-    list_filter = ('type', 
+    list_filter = ('type',
                    'year', 'car_make')  # Filters for the list view
 
 
 # CarMakeAdmin class with CarModelInline
 class CarMakeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description')  # Fields to display in the list view
+    # Fields to display in the list view
+    list_display = ('name', 'description')
     search_fields = ('name',)  # Fields to be searchable
-    inlines = [CarModelInline]  # Display related CarModel instances in CarMake admin page
+    # Display related CarModel instances in CarMake admin page
+    inlines = [CarModelInline]
 
 
 # Register models with their respective admins

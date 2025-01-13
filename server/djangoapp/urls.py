@@ -1,7 +1,7 @@
 # Uncomment the imports before you add the code
-from django.urls import path # type: ignore
-from django.conf.urls.static import static # type: ignore
-from django.conf import settings # type: ignore
+from django.urls import path  # type: ignore
+from django.conf.urls.static import static  # type: ignore
+from django.conf import settings  # type: ignore
 from . import views
 
 app_name = 'djangoapp'

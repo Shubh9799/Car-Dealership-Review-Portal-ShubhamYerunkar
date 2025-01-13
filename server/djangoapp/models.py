@@ -1,7 +1,7 @@
 # Uncomment the following imports before adding the Model code
 
-from django.db import models # type: ignore
-from django.core.validators import MaxValueValidator, MinValueValidator # type: ignore
+from django.db import models  # type: ignore
+from django.core.validators import MaxValueValidator, MinValueValidator  # type: ignore
 
 
 # Create your models here.
@@ -43,7 +43,7 @@ class CarModel(models.Model):
                                validators=[
                                    MaxValueValidator(2023),
                                    MinValueValidator(2015)
-                                   ])
+                               ])
     # Other fields as needed
 
     def __str__(self):
