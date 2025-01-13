@@ -27,9 +27,10 @@ SECRET_KEY =\
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS=['localhost','https://yerunkar99sy-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai']
-CSRF_TRUSTED_ORIGINS=['https://yerunkar99sy-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai']
+All_host = "https://yerunkar99sy-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai";
+CSRF_TO = "https://yerunkar99sy-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai";
+ALLOWED_HOSTS = ['localhost', 'All_host']
+CSRF_TRUSTED_ORIGINS = ['CSRF_TO']
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
